@@ -15,10 +15,11 @@ function scrollNavLink(section){
         $sectionBottom = $sectionTop + $section.outerHeight(),
         $navHeight =$("nav.navbar").outerHeight();
 
-    if (scrollY > $sectionTop - ($navHeight + 5) && scrollY < $sectionBottom) {
-        $(".nav-link.active").removeClass("active");
-        $(`.nav-link[href='#${$sectionId}']`).addClass("active");   
-    }
+        if($sectionId == "Video") return;
+        if(scrollY > $sectionTop - ($navHeight + 5) && scrollY < $sectionBottom) {
+            $(".nav-link.active").removeClass("active");
+            $(`.nav-link[href='#${$sectionId}']`).addClass("active");   
+        }
 }
 function animationNav(){
     let $navHeight = $("nav.navbar").outerHeight();

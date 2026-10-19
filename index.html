@@ -17,6 +17,18 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body class="overflow-x-hidden">
+
+    <div class="loading position-fixed h-100 w-100 d-flex justify-content-center align-items-center">
+        <img src="./Images/logo.png" alt="Logo Image" class="img-fluid">
+    </div>
+    
+    <div class="top d-none text-light">
+        <div class="content p-2">
+            <i class="fas fa-long-arrow-alt-up me-2"></i>
+            <p class="pClamp m-0">To Top</p>
+        </div>
+    </div>
+    
     
     <nav class="navbar navbar-expand-xl">
         <div class="container">
@@ -53,9 +65,9 @@
                         <a class="nav-link p-0 firstColor" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Login
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" data-bs-popper="static">
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" data-bs-popper="static">
                             <li><a class="dropdown-item" href="#">Vendor Login</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li><hr class="dropdown-divider bg-success"></li>
                             <li><a class="dropdown-item" href="#">Client Login action</a></li>
                         </ul>
                     </li>
@@ -253,14 +265,14 @@
         </div>
     </div>
 
-     <section id="Get" class="py-5">
+     <section id="Contact_Us" class="py-5">
         <div class="title secondColor mb-3 animate__heartBeat" data-wow-duration="2s">
             <h2 class="fw-semibold h3Clamp">GET IN TOUCH</h2>
         </div>
         <div class="container">
-            <p class="pClamp firstColor text-center">For More information, please do not hesitate to contact us.</p>
+            <p class="pClamp text-light text-center ">For More information, please do not hesitate to contact us.</p>
             <div class="row p-4 row-gap-4">
-                <div class="col-lg-6 part part1 wow animate__flipInY" data-wow-duration="1.5s">
+                <div class="col-md-6 part part1 wow animate__backInLeft" data-wow-duration="1.5s">
                     <div class="item rounded-3">
                         <form class="p-5">
                             <div class="body">
@@ -313,34 +325,37 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-6 part part2 wow animate__flipInY" data-wow-duration="1.5s">
+                <div class="col-md-6 part part2 wow animate__backInRight" data-wow-duration="1.5s">
                     <div class="item rounded-3 d-flex justify-content-center align-items-center">
                         <div class="info p-3">
+                            <div class="title secondColor mb-3 animate__heartBeat" data-wow-duration="2s">
+                                <h3 class="fw-semibold h4Clamp">Contact Us</h3>
+                            </div>
                             <div class="block d-flex subColor fw-lighter">
                                 <i class="fa-solid fa-location-dot activeColo fs-3 secondColor me-2"></i>
                                 <div class="miniBlock">
-                                    <h3 class="fw-bolder h4Clamp">Address</h3>
+                                    <h3 class="fw-bolder h5Clamp">Address</h3>
                                     <p class="pClamp">178 Safw-bold fs-3 meh Gado St. 6th October City, Giza, Egypt.</p>
                                 </div>
                             </div>
                             <div class="block d-flex subColor fw-lighter">
                                 <i class="fas fa-phone-alt fs-3 secondColor me-2"></i>
                                 <div class="miniBlock">
-                                    <h3 class="fw-bolder h4Clamp" >Phone</h3>
+                                    <h3 class="fw-bolder h5Clamp" >Phone</h3>
                                     <p class="pClamp">(+202) 3825 0102 | (+202) 3825 0105</p>
                                 </div>
                             </div>
                             <div class="block d-flex subColor fw-lighter">
                                 <i class="fa-regular fa-envelope activeColor fs-3 secondColor me-2"></i>
                                 <div class="miniBlock">
-                                    <h3 class="fw-bolder h4Clamp">E-mail</h3>
+                                    <h3 class="fw-bolder h5Clamp">E-mail</h3>
                                     <p class="pClamp">info@l10nhouse.com</p>
                                 </div>
                             </div>
-                            <div class="block text-center d-flex justify-content-center align-items-center">
-                                <a href="#"><i class="fab fa-facebook-f bg-primary"></i></a>
-                                <a href="#"><i class="fab fa-instagram bg-danger"></i></a>
-                                <a href="#"><i class="fab fa-youtube text-bg-danger"></i></a>
+                            <div class="block text-center d-flex column-gap-3 justify-content-center align-items-center">
+                                <a class="facebook" href="#"><i class="fab fa-facebook-f fs-3"></i></a>
+                                <a class="instagram" href="#"><i class="fab fa-instagram fs-3"></i></a>
+                                <a class="youtube" href="#"><i class="fab fa-youtube fs-3"></i></a>
                             </div>
                     </div>
                 </div>

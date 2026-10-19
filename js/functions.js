@@ -1,10 +1,36 @@
+function scrollArrowToTop(){
+    if(scrollY > 0.25 * $("#Home").offset().top){
+        $(".top").removeClass("d-none");
+        $(".top").addClass("d-block");
+       }else{
+            $(".top").removeClass("d-block");
+            $(".top").addClass("d-none");
+       };
+};
+/****************nav************/
+function scrollNavLink(section){
+    let $section = $(section),
+        $sectionId = $section.attr('id'),
+        $sectionTop = $section.offset().top,
+        $sectionBottom = $sectionTop + $section.outerHeight(),
+        $navHeight =$("nav.navbar").outerHeight();
+
+    if (scrollY > $sectionTop - ($navHeight + 5) && scrollY < $sectionBottom) {
+        $(".nav-link.active").removeClass("active");
+        $(`.nav-link[href='#${$sectionId}']`).addClass("active");   
+    }
+}
+function animationNav(){
+    let $navHeight = $("nav.navbar").outerHeight();
+    $("nav.navbar").toggleClass("scrolled", window.scrollY >= $navHeight );
+};
+/***********************************/
 function prepareDesc(desc){
     let regex = /L10N House/gmi;
     return desc.replace(regex, `<span class="fw-bolder"><span class="firstColor">L10N</span> <span class="secondColor">House</span></span>`)
 }
 function showPopupDetails(index){
     let service = services[index];
-    console.log(service)
     $(".popupService .body").html(`
         <h4 class="fw-bold text-center my-4 subColor">${service?.title}</h4>
         <div class="container">
@@ -56,20 +82,6 @@ function closePopup(popupName){
        $(`.${popupName}`).delay(705).fadeOut(1);
     }else{
         $(`.${popupName}`).fadeOut(500);
-    }
-}
-
-/****************nav************/
-function scrollNavLink(section){
-    let $section = $(section),
-        $sectionId = $section.attr('id'),
-        $sectionTop = $section.offset().top,
-        $sectionBottom = $sectionTop + $section.outerHeight(),
-        $navHeight =$("nav.navbar").outerHeight();
-
-    if (scrollY > $sectionTop - $navHeight && scrollY < $sectionBottom) {
-        $(".nav-link.active").removeClass("active");
-        $(`.nav-link[href='#${$sectionId}']`).addClass("active");   
     }
 }
 function prepareLanguages(languages){

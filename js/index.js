@@ -14,16 +14,44 @@ let services = [];
                 </div>
                 `);
         });
+
     }catch(error){
 
 }
 })();
-$(window).scroll(function(){
-    let $navHeight = $("nav.navbar").outerHeight();
-    $("nav.navbar").toggleClass("scrolled", window.scrollY >= $navHeight );
-
+/*******arrow**************/
+scrollArrowToTop();
+$(".top").on("click", function(){
+    window.scrollTo(0, 0);
+});
+/*******animationNav**************/
+animationNav();
+/*******scrollNavLin**************/
+$("section").each(function(index, section){
+    scrollNavLink(section);
+});
+$(window).scroll(function(){ 
+    /*******arrow**************/
+    scrollArrowToTop();
+    $(".top").on("click", function(){
+        window.scrollTo(0, 0);
+    });
+    /*******animationNav**************/
+    animationNav();
+    
+    /*******scrollNavLink**************/
     $("section").each(function(index, section){
         scrollNavLink(section);
+    });
+});
+$(window).on("load",function(){
+    $(".loading").delay(1000).queue(function(next) {
+        $(this).addClass("hide");
+        next(); 
+    })
+    .delay(750).queue(function(next){
+        $(this).addClass("d-none");
+        next(); 
     });
 });
 wow = new WOW({
@@ -70,8 +98,6 @@ wow.init();
     try{
         let response = await fetch("https://semicode.tech/api/v1/l10nhouse/languages");
         languages = await response.json();
-        console.log(response)
-        console.log(languages)
         $.each(languages, function(index, language){
             $(".popupLanguages .Languages").append(`
                 <section class="mt-4">

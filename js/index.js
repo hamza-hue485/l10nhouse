@@ -1,11 +1,13 @@
 let services = [];
 (async function(){
     try{
-        let response = await fetch("https://semicode.tech/api/v1/l10nhouse/services");
-        services = await response.json();
+        let response = await fetch("https://semicode.tech/api/v1/l10nhouse/services"),
+        services = await response.json(),
+        rowEl = $("#Services .row");
+        rowEl.empty();
         $.each(services, function(index, service){
-            $("#Services .row").append(`
-                <div class="col-md-6 part wow ${(index % 2 == 0)? 'animate__fadeInLeft' : 'animate__fadeInRight'}" data-wow-delay="${index * 0.2}s" data-wow-duration="1s">
+            rowEl.append(`
+                <div class="col-md-6 part wow ${(index % 2 == 0)? 'animate__backInLeft' : 'animate__backInRight'}" data-wow-duration="1s">
                    <div class="item text-center p-3">
                         <img src="./Images/${service?.icon}" alt="icon 1" class="img-fluid icon mb-3">
                         <h4 class="firstColor h5Clamp fw-bolder mb-3">${service?.title}</h4>
@@ -14,7 +16,6 @@ let services = [];
                 </div>
                 `);
         });
-
     }catch(error){
 
 }
@@ -133,7 +134,7 @@ $('.owl-carousel').owlCarousel({
             items:5
         }
     }
-})
+});
 
 
 

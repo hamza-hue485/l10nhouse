@@ -245,9 +245,6 @@ nav.navbar .navbar-collapse ul .nav-link {
     margin-inline: auto;
   }
 }
-nav.navbar .navbar-collapse ul .nav-link {
-  /*450*/
-}
 nav.navbar .navbar-collapse ul .nav-link.active, nav.navbar .navbar-collapse ul .nav-link:hover, nav.navbar .navbar-collapse ul .nav-link:focus, nav.navbar .navbar-collapse ul .nav-link.show {
   color: #719F3D;
 }
@@ -284,7 +281,7 @@ nav.navbar .navbar-collapse ul .dropdown ul.dropdown-menu a:hover {
   background: #E0EAFC; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #CFDEF3, #E0EAFC);
-  z-index: 3;
+  z-index: 4;
   opacity: 1;
   transition-duration: 0.75s;
 }
@@ -299,9 +296,6 @@ nav.navbar .navbar-collapse ul .dropdown ul.dropdown-menu a:hover {
   .loading img {
     width: 55%;
   }
-}
-.loading img {
-  /*450*/
 }
 @media (min-width: 371px) and (max-width: 1300px) {
   .loading img {
@@ -577,16 +571,16 @@ nav.navbar .navbar-collapse ul .dropdown ul.dropdown-menu a:hover {
 .popupLanguages .box.show {
   transform: translate(0%);
 }
-.popupLanguages .box .Languages section:nth-of-type(2n + 1) h2, .popupLanguages .box .Languages section:nth-of-type(2n + 1) i {
+.popupLanguages .box.Languages section:nth-of-type(2n + 1) h2, .popupLanguages .box.Languages section:nth-of-type(2n + 1) i {
   color: #EE5E00;
 }
-.popupLanguages .box .Languages section:nth-of-type(2n + 1) .special::after {
+.popupLanguages .box.Languages section:nth-of-type(2n + 1) .special::after {
   background-color: #EE5E00;
 }
-.popupLanguages .box .Languages section:nth-of-type(2n) h2, .popupLanguages .box .Languages section:nth-of-type(2n) i, .popupLanguages .box .Languages section:nth-of-type(2n) .special::after {
+.popupLanguages .box.Languages section:nth-of-type(2n) h2, .popupLanguages .box.Languages section:nth-of-type(2n) i, .popupLanguages .box.Languages section:nth-of-type(2n) .special::after {
   color: #719F3D;
 }
-.popupLanguages .box .Languages section:nth-of-type(2n) .special::after {
+.popupLanguages .box.Languages section:nth-of-type(2n) .special::after {
   background-color: #719F3D;
 }
 

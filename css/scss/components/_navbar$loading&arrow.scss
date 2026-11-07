@@ -85,7 +85,7 @@ nav.navbar{
         background: #E0EAFC;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #CFDEF3, #E0EAFC);
-        z-index: 3;
+        z-index: 4;
         opacity: 1;
         transition-duration: 0.75s;
         &.hide{

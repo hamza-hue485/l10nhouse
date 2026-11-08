@@ -245,6 +245,9 @@ nav.navbar .navbar-collapse ul .nav-link {
     margin-inline: auto;
   }
 }
+nav.navbar .navbar-collapse ul .nav-link {
+  /*450*/
+}
 nav.navbar .navbar-collapse ul .nav-link.active, nav.navbar .navbar-collapse ul .nav-link:hover, nav.navbar .navbar-collapse ul .nav-link:focus, nav.navbar .navbar-collapse ul .nav-link.show {
   color: #719F3D;
 }
@@ -296,6 +299,9 @@ nav.navbar .navbar-collapse ul .dropdown ul.dropdown-menu a:hover {
   .loading img {
     width: 55%;
   }
+}
+.loading img {
+  /*450*/
 }
 @media (min-width: 371px) and (max-width: 1300px) {
   .loading img {
@@ -418,7 +424,7 @@ nav.navbar .navbar-collapse ul .dropdown ul.dropdown-menu a:hover {
   width: 100%;
   transform: rotateX(180deg);
   position: absolute;
-  bottom: 0;
+  bottom: -15px;
   left: 0;
 }
 

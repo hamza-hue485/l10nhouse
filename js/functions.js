@@ -28,10 +28,11 @@ function animationNav(){
 /***********************************/
 function prepareDesc(desc){
     let regex = /L10N House/gmi;
-    return desc.replace(regex, `<span class="fw-bolder"><span class="firstColor">L10N</span> <span class="secondColor">House</span></span>`)
+    return desc?.replace(regex, `<span class="fw-bolder"><span class="firstColor">L10N</span> <span class="secondColor">House</span></span>`)
 }
 function showPopupDetails(index){
     let service = services[index];
+    console.log(service)
     $(".popupService .body").html(`
         <h4 class="fw-bold text-center my-4 subColor">${service?.title}</h4>
         <div class="container">
@@ -48,7 +49,8 @@ function showPopupDetails(index){
                 </div>
             </div>
         </div>
-        ${prepareSectionTitles(service.sections)}
+        
+        ${prepareSectionTitles(service?.sections)}
         `);
     openPopup('popupService');
 }

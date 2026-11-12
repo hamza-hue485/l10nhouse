@@ -2,8 +2,8 @@ let services = [];
 (async function(){
     try{
         let response = await fetch("https://semicode.tech/api/v1/l10nhouse/services"),
-        services = await response.json(),
         rowEl = $("#Services .row");
+        services = await response.json();
         rowEl.empty();
         $.each(services, function(index, service){
             rowEl.append(`
@@ -17,7 +17,6 @@ let services = [];
                 `);
         });
     }catch(error){
-
 }
 })();
 /*******arrow**************/
